@@ -25,8 +25,6 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
     }
 }
 
-$sql = "SELECT * FROM franchisers order by franchisers_name desc";
-$res = mysqli_query($conn, $sql);
 
 
 ?>
