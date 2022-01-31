@@ -83,10 +83,10 @@
                     <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
                         <div class="slide">
                             <div class="slider__inner">
-                                <h2>collection 2018</h2>
-                                <h1>NICE CHAIR</h1>
+                                <h2>collection 2022</h2>
+                                <h1>CSE BOYS</h1>
                                 <div class="cr__btn">
-                                    <a href="cart.html">Shop Now</a>
+                                    <a href="cart.html">Bid Now</a>
                                 </div>
                             </div>
                         </div>
@@ -107,10 +107,10 @@
                     <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
                         <div class="slide">
                             <div class="slider__inner">
-                                <h2>collection 2018</h2>
-                                <h1>NICE CHAIR</h1>
-                                <div class="cr__btn">
-                                    <a href="cart.html">Shop Now</a>
+                                <h2 style="font-size: 25px;">Intre-Daprtment Cricket Tournament, 2022</h2>
+                                <h1 style="font-size: 40px">Player Auction</h1>
+                                <div class=" cr__btn">
+                                    <a href="cart.html">Bid Now</a>
                                 </div>
                             </div>
                         </div>
@@ -135,8 +135,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="section__title--2 text-center">
-                    <h2 class="title__line">New Arrivals</h2>
-                    <p>But I must explain to you how all this mistaken idea</p>
+                    <h2 class="title__line">New Players</h2>
+                    <p>CSE Cricket Board, CCB</p>
                 </div>
             </div>
         </div>
@@ -147,23 +147,21 @@
 
                     <?php
 
-                    $getProduct = get_product($conn, "latest", 4, '', '');
-                    foreach ($getProduct as $product) {
-
+                    $getPlayer = get_product($conn, 4, "");
+                    // prx($getProduct);
+                    foreach ($getPlayer as $player) {
                     ?>
-
                         <div class="col-md-4 col-lg-3 col-sm-4 col-xs-12">
                             <div class="category">
                                 <div class="ht__cat__thumb">
-                                    <a href="product.php?id=<?php echo $product['id'] ?>">
-                                        <img style="width:350px; height:280px" src="media/product/<?php echo $product['image'] ?>" alt="product images">
+                                    <a href="#">
+                                        <img style="width:350px; height:280px" src="media/players/<?php echo $player['image'] ?>" alt="players images">
                                     </a>
                                 </div>
                                 <div class="fr__product__inner" style="margin-top: 10px; text-align: center">
-                                    <h4 style="font-weight: 800;"><a href="product.hp?id=<?php echo $product['id'] ?>"><?php echo $product['product_name'] ?></a></h4>
+                                    <h4 style="font-weight: 800;"><a href="product.php?id=<?php echo $player['id'] ?>"><?php echo $player['player_name'] ?></a></h4>
                                     <ul class="fr__pro__prize">
-                                        <li class="old__prize"><?php echo $product['product_mrp'] ?></li>
-                                        <li><?php echo $product['price'] ?></li>
+                                        <li>Price : <?php echo $player['price'] ?></li>
                                     </ul>
                                 </div>
                             </div>
@@ -177,50 +175,5 @@
 </section>
 <!-- End Category Area -->
 
-<!-- Start Product Area -->
-<section class="ftr__product__area ptb--100">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="section__title--2 text-center">
-                    <h2 class="title__line">Best Seller</h2>
-                    <p>But I must explain to you how all this mistaken idea</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="product__wrap clearfix">
-                <!-- Start Single Category -->
-                <div class="col-md-4 col-lg-3 col-sm-4 col-xs-12">
-                    <div class="category">
-                        <div class="ht__cat__thumb">
-                            <a href="product-details.html">
-                                <img src="images/product/9.jpg" alt="product images">
-                            </a>
-                        </div>
-                        <div class="fr__hover__info">
-                            <ul class="product__action">
-                                <li><a href="wishlist.html"><i class="icon-heart icons"></i></a></li>
-
-                                <li><a href="cart.html"><i class="icon-handbag icons"></i></a></li>
-
-                                <li><a href="#"><i class="icon-shuffle icons"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="fr__product__inner">
-                            <h4><a href="product-details.html">Special Wood Basket</a></h4>
-                            <ul class="fr__pro__prize">
-                                <li class="old__prize">$30.3</li>
-                                <li>$25.9</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Category -->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Product Area -->
 
 <?php require('footer.php'); ?>
