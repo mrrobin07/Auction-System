@@ -25,7 +25,7 @@ Connection :
 
 2. ManagePlayer.php
     
-#View-Route
+# View-Route
 
 | # | Request Type     |      Paths         |    RouteName   |
 |:-:|:----------------:|:------------------:|:--------------:|
