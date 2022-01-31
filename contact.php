@@ -20,7 +20,7 @@ require('top.php');
                     </div>
                     <div class="address__details">
                         <h2 class="ct__title">our address</h2>
-                        <p>666 5th Ave New York, NY, United </p>
+
                     </div>
                 </div>
                 <div class="address">
@@ -29,7 +29,7 @@ require('top.php');
                     </div>
                     <div class="address__details">
                         <h2 class="ct__title">openning hour</h2>
-                        <p>666 5th Ave New York, NY, United </p>
+
                     </div>
                 </div>
 
