@@ -3,7 +3,7 @@ require('top.php');
 
 $category_id = get_safe_value($conn, $_GET['id']);
 
-$getProduct = get_product($conn, "latest", 4, $category_id, '');
+$getProduct = get_product($conn, 4, $category_id);
 // prx($get_product);
 
 ?>
@@ -132,13 +132,13 @@ $getProduct = get_product($conn, "latest", 4, $category_id, '');
                                     <div class="category">
                                         <div class="ht__cat__thumb">
                                             <a href="product.php?id= <?php echo $product['id'] ?>">
-                                                <img style="width:350px; height:280px" src="media/product/<?php echo $product['image'] ?>" alt="product images">
+                                                <img style="width:350px; height:280px" src="media/players/<?php echo $product['image'] ?>" alt="product images">
                                             </a>
                                         </div>
                                         <div class="fr__product__inner" style="margin-top: 10px; text-align: center">
-                                            <h4 style="font-weight: 800;"><a href="product.hp?id=<?php echo $product['id'] ?>"> <?php echo $product['product_name'] ?></a></h4>
+                                            <h4 style="font-weight: 800;"><a href="product.hp?id=<?php echo $product['id'] ?>"> <?php echo $product['player_name'] ?></a></h4>
                                             <ul class="fr__pro__prize">
-                                                <li class="old__prize"><?php echo $product['product_mrp'] ?></li>
+                                                <li class="old__prize"><?php echo $product['price'] ?></li>
                                                 <li><?php echo $product['price'] ?></li>
                                             </ul>
                                         </div>
