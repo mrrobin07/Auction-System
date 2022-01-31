@@ -1,8 +1,7 @@
 # player Add 
 
 # Description
-Here we implements the payment feature where teachers can contact with the authority. Teacher can fill up a form and submit this with there payment details.
-
+Here we implements the functionality of player adding 
 
 # Active Controller
 
