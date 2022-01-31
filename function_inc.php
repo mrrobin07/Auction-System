@@ -13,39 +13,24 @@ function prx($arr)
     die();
 }
 
-function get_product($conn, $types, $limit, $cat_id, $product_id)
+function get_product($conn, $limit, $cat_id)
 {
 
-    $sql = "SELECT product.*, categories.categories_name FROM product, categories WHERE product.status = 1";
+    $sql = "SELECT * FROM players WHERE action = 1";
 
     if ($cat_id != '') {
-        $sql .= " and product.categories_id = $cat_id";
+        $sql .= " and categories_id = $cat_id";
     }
 
-    if ($product_id != '') {
-        $sql .= " and product.id = $product_id";
+    if ($limit != "") {
+        $sql .= " limit $limit";
     }
-
-    $sql .= " and product.categories_id = categories.id";
-
-
-    if ($types == 'latest') {
-        $sql .= " ORDER BY product.id desc";
-    }
-
-    if ($limit != '') {
-        $sql .= " limit $limit ";
-    }
-
     $res = mysqli_query($conn, $sql);
-
-    $product = array();
-
+    $data = array();
     while ($row = mysqli_fetch_assoc($res)) {
-        $product[] = $row;
+        $data[] = $row;
     }
-
-    return $product;
+    return $data;
 }
 
 function get_safe_value($conn, $str)
