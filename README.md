@@ -19,7 +19,8 @@ Connection :
 # File
 
 1. AddPlayer.php
- Query : 
+
+query
  ``` $sql = "SELECT players.*, categories.categories_name FROM players, categories WHERE players.categories_id = categories.id order by players.player_name desc";
 ```
 
