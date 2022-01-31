@@ -4,12 +4,12 @@
 Here we implements the players sold features.
 
 Connection : 
-
+```
 <?php
     session_start();
     $conn = mysqli_connect ('localhost', 'root', '', 'auction system');
 ?>
-
+```
 
 # File
 
